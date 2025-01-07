@@ -1,0 +1,47 @@
+{
+  "name": "vite-boilerplate",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run watch:css\" \"vite --host\"",
+    "watch:css": "tailwindcss -i ./src/index.css -o ./src/index-tailwind.css --watch",
+    "deploy": "gh-pages -d docs",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.50.1",
+    "@twa-dev/sdk": "^7.0.0",
+    "@types/lodash": "^4.17.6",
+    "@vitejs/plugin-basic-ssl": "^1.0.1",
+    "eruda": "^3.0.1",
+    "firebase": "^10.12.2",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-device-detect": "^2.2.3",
+    "react-dom": "^18.2.0",
+    "react-facebook-pixel": "^1.0.4",
+    "react-helmet": "^6.1.0",
+    "styled-components": "^6.1.11",
+    "viem": "^2.17.2",
+    "wagmi": "^2.10.9"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@types/react-helmet": "^6.1.11",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react": "^4.0.3",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "gh-pages": "^6.1.1",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  }
+}

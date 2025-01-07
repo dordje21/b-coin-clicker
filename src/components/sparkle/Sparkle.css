@@ -1,0 +1,22 @@
+/* src/components/Sparkle.css */
+.sparkle {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	pointer-events: none;
+	animation: sparkle 1s ease-out;
+	font-size: 24px;
+	font-weight: bold;
+	z-index: 999;
+}
+
+@keyframes sparkle {
+	0% {
+			transform: scale(1) translateY(0px);
+			opacity: 1;
+	}
+	100% {
+			transform: scale(2) translateY(-100px);
+			opacity: 0;
+	}
+}
